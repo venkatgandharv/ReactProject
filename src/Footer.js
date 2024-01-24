@@ -1,12 +1,13 @@
-import React from 'react';
-import "./header.css"
+import React from "react";
+import "./footer.css";
 
 const Footer = () => {
   return (
-    <footer>
-      <p>&copy; 2024 Your Website. All rights reserved.</p>
-      {/* Add other footer content as needed */}
-    </footer>
+    <div>
+      <div className="footer">
+        &copy; 2024 Your Website. All rights reserved.
+      </div>
+    </div>
   );
 };
 

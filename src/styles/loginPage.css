@@ -1,6 +1,8 @@
-.bg {
-background-color: #e5e5f7;
-opacity: 0.3;
-background-image: radial-gradient(#5d5e6b 0.5px, #e5e5f7 0.5px);
-background-size: 1000px 1000px;
-} 
+.loginPage {
+  background-color: #e5e5f7;
+  opacity: 0.3;
+  background-image: radial-gradient(#5d5e6b 0.5px, #e5e5f7 0.5px);
+  background-size: 1000px 1000px;
+  display:flex;
+  
+}
