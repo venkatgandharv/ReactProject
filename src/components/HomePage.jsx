@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/homePage.css";
 import { Logout } from "./Logout";
+import Header from "../Header";
 // import { useNavigate, useLocation } from "react-router-dom";
 
 function HomePage(props) {
@@ -26,6 +27,7 @@ function HomePage(props) {
 
   return (
     <>
+    <Header/>
       <div className="form">
         <form
           className="login-form home-form"

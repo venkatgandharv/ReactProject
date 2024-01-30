@@ -6,7 +6,7 @@ import Footer from "../Footer";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
 
   const navigate = useNavigate();
 
@@ -15,11 +15,11 @@ const LoginPage = () => {
   console.log("Password:", password);
 
   const handleSubmit = () => {
-    // if (email === "bannu45t@icloud.com" && password === "Rohitsharma@45") {
-    navigate("/home", { state: { email, password } });
-    // } else {
-    // setError("Invalid email or password. Please try again.");
-    // }
+    if (email === "bannu45t@icloud.com" && password === "Rohitsharma@45") {
+      navigate("/home", { state: { email, password } });
+    } else {
+      setError("Invalid email or password. Please try again.");
+    }
   };
 
   return (
@@ -52,10 +52,9 @@ const LoginPage = () => {
           <button className="btn" onClick={handleSubmit}>
             Submit
           </button>
-          {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
+          {error && <p style={{ color: "red" }}>{error}</p>}
         </form>
       </div>
-      <Footer />
     </>
   );
 };
