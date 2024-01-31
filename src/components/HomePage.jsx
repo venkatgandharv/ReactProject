@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import "../styles/homePage.css";
-import { Logout } from "./Logout";
-import Header from "../Header";
-// import { useNavigate, useLocation } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
 
-function HomePage(props) {
+function HomePage({ loggedIn, onLogout }) {
   const [participantName, setPartcipantName] = useState("");
   const [particpantsList, setParticipantsList] = useState([]);
-  // const navigate = useNavigate();
-  // const location = useLocation(props);
-  // const state = location?.state;
 
   const handleInputChange = (e) => {
     setPartcipantName(e.target.value);
@@ -21,13 +17,11 @@ function HomePage(props) {
 
       setPartcipantName("");
     }
-
-    // navigate("/login");
   };
 
   return (
     <>
-    <Header/>
+      <Header onLogout={onLogout} loggedIn={loggedIn} />
       <div className="form">
         <form
           className="login-form home-form"
@@ -58,6 +52,7 @@ function HomePage(props) {
           </div>
         </form>
       </div>
+      <Footer />
     </>
   );
 }

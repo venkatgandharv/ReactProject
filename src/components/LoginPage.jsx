@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "../Header";
-import Footer from "../Footer";
+import Header from "./Header";
+import Footer from "./Footer";
 
-const LoginPage = () => {
+const LoginPage = ({ onLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -17,6 +17,7 @@ const LoginPage = () => {
   const handleSubmit = () => {
     if (email === "bannu45t@icloud.com" && password === "Rohitsharma@45") {
       navigate("/home", { state: { email, password } });
+      onLogin();
     } else {
       setError("Invalid email or password. Please try again.");
     }
@@ -55,6 +56,7 @@ const LoginPage = () => {
           {error && <p style={{ color: "red" }}>{error}</p>}
         </form>
       </div>
+      <Footer />
     </>
   );
 };

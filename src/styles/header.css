@@ -1,6 +1,7 @@
 .header {
   position: relative;
-  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -8,6 +9,14 @@
   font-size: 20px;
   font-family: Arial;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center {
+  flex: 10; /* Takes up remaining space */
+  text-align: center;
+  padding-left: 100px;
 }
 
 .form {
@@ -67,13 +76,4 @@
 
 .title-login {
   font-size: 40px;
-}
-
-.logout-btn {
-  padding: 8px 16px;
-  background-color: #ff6347;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }

@@ -2,11 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/logout.css";
 
-export const Logout = ({setIsAuthenticated}) => {
+export const Logout = ({ onLogout }) => {
   const navigate = useNavigate();
   const handleLogout = () => {
-    setIsAuthenticated(false);
-    // navigate("/login");
+    navigate("/");
+    onLogout();
   };
   return (
     <>
@@ -17,4 +17,4 @@ export const Logout = ({setIsAuthenticated}) => {
       </div>
     </>
   );
-  }
+};

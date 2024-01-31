@@ -1,11 +1,11 @@
 import React from "react";
-import "./footer.css";
+import "../styles/footer.css";
 
 const Footer = () => {
   return (
     <div>
       <div className="footer">
-        &copy; 2024 Your Website. All rights reserved.
+        &copy; 2024 Bannu Thanniru's Website. All rights reserved.
       </div>
     </div>
   );
