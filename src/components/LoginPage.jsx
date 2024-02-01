@@ -10,13 +10,9 @@ const LoginPage = ({ onLogin }) => {
 
   const navigate = useNavigate();
 
-  console.log("hello");
-  console.log("Email:", email);
-  console.log("Password:", password);
-
   const handleSubmit = () => {
     if (email === "bannu45t@icloud.com" && password === "Rohitsharma@45") {
-      navigate("/home", { state: { email, password } });
+      navigate("/home");
       onLogin();
     } else {
       setError("Invalid email or password. Please try again.");

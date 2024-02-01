@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "../components/LoginPage";
 import HomePage from "../components/HomePage";
-// import { FirstPage } from "./components/FirstPage";
-// import { SecondPage } from "./components/SecondPage";
 
 function AppRoutes(props) {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(() => {
+    return localStorage.getItem("loggedIn") === "true";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("loggedIn", loggedIn);
+  }, [loggedIn]);
 
   const handleLogin = () => {
     setLoggedIn(true);
