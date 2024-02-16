@@ -22,35 +22,37 @@ const LoginPage = ({ onLogin }) => {
   return (
     <>
       <Header />
-      <div className="form">
-        <form className="login-form" onSubmit={(e) => e.preventDefault()}>
-          <div className="login-items">
-            <header className="title-login">Log In</header>
-          </div>
+      <div className="center-box">
+        <div className="form">
+          <form className="login-form" onSubmit={(e) => e.preventDefault()}>
+            <div className="login-items">
+              <header className="title-login">Log In</header>
+            </div>
 
-          <div className="login-items">
-            <label className="label-item email"> Email : </label>
-            <input
-              className="input-item"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="login-items">
-            <label className="label-item password"> Password : </label>
-            <input
-              className="input-item"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <button className="btn" onClick={handleSubmit}>
-            Submit
-          </button>
-          {error && <p style={{ color: "red" }}>{error}</p>}
-        </form>
+            <div className="login-items">
+              <label className="label-item email"> Email : </label>
+              <input
+                className="input-item"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="login-items">
+              <label className="label-item password"> Password : </label>
+              <input
+                className="input-item"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <button className="btn" onClick={handleSubmit}>
+              Submit
+            </button>
+            {error && <p style={{ color: "red" }}>{error}</p>}
+          </form>
+        </div>
       </div>
       <Footer />
     </>
